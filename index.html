@@ -88,7 +88,7 @@ textarea:focus {
 <script>
 function generateStoryMap() {
   const input = document.getElementById('input').value;
-  const lines = input.split('\n');
+  const lines = input.split('\n').filter(Boolean);
   const container = document.getElementById('container');
 
   // Clear existing map
