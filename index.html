@@ -99,6 +99,7 @@
   <script>
     function generateStoryMap() {
       const input = document.getElementById('input').value;
+      window.location.hash = encodeURIComponent(input)
       const lines = input.split('\n').filter(Boolean);
       const container = document.getElementById('container');
 
@@ -161,6 +162,13 @@
 
 <div>
   <textarea id="input" rows="35" cols="50" oninput="generateStoryMap()">
+</textarea>
+  <button id="hide-editor" onclick="toggleEditor()">Hide Editor</button>
+</div>
+<script>
+  function populateTextArea() {
+    const defaultContent = `
+
 🙋‍♀️ Persona: Small business owner wants a business email for the first time.
 📚 Research Options
 * Visit Email Provider Websites
@@ -205,10 +213,10 @@
 ** Send test email
 🤔 First renewal
 *
-</textarea>
-  <button id="hide-editor" onclick="toggleEditor()">Hide Editor</button>
-</div>
-<script>
+    `
+    document.querySelector('#input').value = decodeURIComponent(window.location.hash) || defaultContent
+  }
+  populateTextArea()
   generateStoryMap()
 </script>
 </body>
