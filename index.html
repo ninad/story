@@ -168,8 +168,8 @@
 <script>
   function populateTextArea() {
     const defaultContent = `
-
 🙋‍♀️ Persona: Small business owner wants a business email for the first time.
+
 📚 Research Options
 * Visit Email Provider Websites
 ** Browse Product Offerings
@@ -177,7 +177,8 @@
 * Seek Recommendations
 ** Read Online Reviews
 ** Consult with Influencers
-💳 Purchase Process
+
+💳 Purchase Email
 * Choose Business Domain
 ** Enter a domain name
 ** 🟢 Allow to buy a new domain
@@ -195,7 +196,8 @@
 ** Enter Users+EmailIDs
 ** Choose add-on email ID
 ** Complete Purchase
-📦 First Use
+
+📦 First Use Email
 * Login
 ** 🔴 Enter Email and Password
 ** 🟢 Allow Google sign in to make this process easy?
@@ -207,11 +209,21 @@
 * Send first email
 ** Click Compose New Email (Easy to find, prompt?)
 ** 🔴 Type an email address
+* Send first email
+** Click Compose New Email (Easy to find, prompt?)
+** 🔴 Type an email address
 ** 🟢 Some kind of directory hook?
 ** 🟢 Nudge to import contacts
 ** 🟢 Auto complete with a default email address to allow users to test
 ** Send test email
-🤔 First renewal
+
+📥 Daily Email Usage
+* Check email
+** Open existing google or outlook email 
+** Remember to check new Titan email 
+
+
+💵 Email renewal
 *
     `
     document.querySelector('#input').value = decodeURIComponent(window.location.hash) || defaultContent
