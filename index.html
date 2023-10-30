@@ -76,9 +76,9 @@
           font-size: 15px;
           line-height: 20px;
           position: fixed;
-          bottom: 30px;
-          height: 400px;
-          width: 400px;
+          bottom: 42px;
+          height: 500px;
+          width: 500px;
           border: 1px solid #dadada;
           background-color: #fafafa;
           margin: 10px;
@@ -98,6 +98,8 @@
           position: fixed;
           left: 18px;
           bottom: 10px;
+          border: 1px #ccc;
+          padding: 10px;
       }
   </style>
   <script>
@@ -165,9 +167,9 @@
 <div id="container" class="container"></div>
 
 <div>
-  <textarea id="input" rows="35" cols="50" oninput="generateStoryMap()">
+<textarea id="input" rows="35" cols="50" oninput="generateStoryMap()">
 </textarea>
-  <button id="hide-editor" onclick="toggleEditor()">Hide Editor</button>
+<button id="hide-editor" onclick="toggleEditor()">Hide Editor</button>
 </div>
 <script>
   function populateTextArea() {
