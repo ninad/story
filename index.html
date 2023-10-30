@@ -168,86 +168,54 @@
 <script>
   function populateTextArea() {
     const defaultContent = `
-🙋‍♀️ Persona: Small business owner wants a business email for the first time.
+🙋‍♂️ Persona: James, a busy professional
+🚘 Activities: Order a ride
 
-📚 Research Options
-* Visit Email Provider Websites
-** Browse Product Offerings
-** Compare Features and Pricing
-* Seek Recommendations
-** Read Online Reviews
-** Consult with Influencers
+* Step: Open app
+** Story: Log in to my account
+** Story: View pickup location on map
 
-💳 Purchase Email
-* Choose Business Domain
-** Enter a domain name
-** 🟢 Allow to buy a new domain
+* Step: Request a ride
+** Story: Select ride type (UberX, UberPool etc.)
+** Story: Set pickup location
+** Story: Set destination
+** Story: Confirm pickup time
+** Story: Choose payment method
 
-* Select plan
-** Select Plan
-** Choose billing cycle
-** 🟢 Choose longer billing cycle to get discount
+* Step: Track driver
+** Story: See driver's name, photo, vehicle details
+** Story: View real-time location of driver on map
+** 🔴Story: Get notified when driver is late
+** 🟢Story: Get notified with reason when driver will be late
 
-* Account Creation
-** Initiate Account Setup
-** Verify Email
-** 🟢 Google Auth
+* Step: Take ride
+** 🟢Story: Get notified when driver arrives
+** Story: Rate driver and provide feedback after trip
 
+🍽️ Activities: Order food delivery
 
-* Purchase Product
-** Add to Cart
-** Enter Billing Information
-** Provide Company Name
-* Add team members
-** Enter Users+EmailIDs
-** Choose add-on email ID
-** Complete Purchase
+* Step: Browse restaurants
+** 🔴Story: Search does not return expected restaurants
+** 🟢Story: Intelligent search understands typos and shorthand
+** Story: View menu and prices
 
-📦 First Use Email
-* Login
-** 🔴 Enter Email and Password
-** 🟢 Allow Google sign in to make this process easy?
+* Step: Place order
+** Story: Add items from menu to cart
+** Story: Select delivery address
+** Story: Choose delivery time
+** Story: Add special instructions
+** Story: Pay via app
 
-* Onboarding
-** Take Tour or Skip Tour
-** Set a signature
-** Set a profile photo
-** Import contacts? (most wont do)
-** 🟢 Prompt to send first test email
-** 🟢 Prompt to use intro template
-** 🟢 Auto-fill test titan email 
+* Step: Track order
+** 🔴Story: Order status not updated in real-time
+** 🟢Story: Live order tracking with step-by-step status 
+** Story: Chat with delivery partner
 
-* Check existing Gmail
-** [?] Assumption: Users have an existing gmail-id they use for the business. Do users want to check that in Neo
-** [?] Should neo allow users to check exiting email so start giving them value
-** 🟢 Connect existing Gmail account to check email 
-
-* Send first real email (When does this happen)
-** Click Compose New Email (Easy to find, prompt?)
-** 🔴 Type an email address
-** 🔴 Sees an empty auto-complete
-
-* Send first email (New)
-** Click Compose New Email (Easy to find, prompt?)
-** 🟢 Directory hook to click on next to "To:" field and selects from a contact?
-** 🟢 Starts to type email address gets hello@titan in auto-complete
-** 🟢 Ability to import contacts in context
-** 🟢 Auto complete with a default email address to allow users to test
-** Send test email
-
-📥 Daily Email Usage
-* 🔴 Check email in Gmail
-** Open existing google or outlook email 
-** 🟢 Reminder to check new Titan email 
-
-🌍 Build NEO Site
-* Design site
-* Publish site
-* Share site
-
-💵 Email renewal
-*
-    `
+* Step: Receive order
+** 🔴Story: Food is cold on arrival
+** 🟢Story: Food kept hot during delivery
+** Story: Provide ratings and feedback
+`
     document.querySelector('#input').value = decodeURIComponent(window.location.hash) || defaultContent
   }
   populateTextArea()
