@@ -86,6 +86,14 @@
           transition: border-color 0.3s ease; /* Smooth transition */
       }
 
+      .menu {
+          font-family: "Lucida Console", Courier, monospace;
+          font-size: 15px;
+          position: fixed;
+          bottom: 21px;
+          left: 155px;
+      }
+
       textarea:focus {
           border-color: rgb(134, 0, 0);
       }
@@ -95,6 +103,8 @@
       }
 
       #hide-editor {
+          font-family: "Lucida Console", Courier, monospace;
+          font-size: 15px;
           position: fixed;
           left: 18px;
           bottom: 10px;
@@ -170,6 +180,7 @@
 <textarea id="input" rows="35" cols="50" oninput="generateStoryMap()">
 </textarea>
 <button id="hide-editor" onclick="toggleEditor()">Hide Editor</button>
+<div id="menu" class="menu"><a href="storymap.site/how-to-use.html" target="_blank">How to use it</a></div>
 </div>
 <script>
   function populateTextArea() {
