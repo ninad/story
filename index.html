@@ -200,6 +200,11 @@
         button.innerText = 'Hide Editor'
       }
     }
+    window.addEventListener('keydown', event => {
+      if(event.metaKey && event.key === '/' && event.target.tagName !== 'TEXTAREA') {
+        toggleEditor()
+      }
+    })
   </script>
 </head>
 <body>
