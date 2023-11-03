@@ -98,9 +98,13 @@
       }
 
       .hidden {
-          display: none;
+          width: 0 !important;
+          overflow: hidden;
       }
 
+      .hidden textarea {
+          width: 0;
+      }
       #hide-editor {
           font-size: 15px;
           border: 1px #ccc solid;
@@ -108,8 +112,10 @@
       }
       .left-section {
           width: 400px;
+          transition: all ease-in 100ms;
       }
       .right-section {
+          transition: all ease-in 100ms;
           display: flex;
           flex-direction: column;
           flex-grow: 1;
@@ -183,7 +189,7 @@
     }
 
     function toggleEditor() {
-      const input = document.getElementById('input');
+      const input = document.querySelector('.left-section');
       input.classList.toggle('hidden')
       const button = document.querySelector('#hide-editor')
       if (input.classList.contains('hidden')) {
