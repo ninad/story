@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -215,7 +216,7 @@
         <div id="menu" class="menu"><a href="/how-to-use.html" target="_blank">How it works</a></div>
       </div>
       <div>
-        <img src="./assets/logo-grey.png" height="35">
+        <img src="./images/logo-grey.png" height="35">
       </div>
     </div>
   </div>
@@ -280,6 +281,16 @@
 
   populateTextArea()
   generateStoryMap()
+</script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+      navigator.serviceWorker
+      .register("/serviceWorker.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err))
+    })
+  }
 </script>
 </body>
 </html>
