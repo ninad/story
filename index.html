@@ -146,6 +146,11 @@
           gap: 16px;
           align-items: center;
       }
+      .dl a{
+        text-decoration: underline;
+        cursor: pointer; 
+        color: #0000EE;  
+      }
   </style>
   <script>
     function generateStoryMap() {
@@ -224,7 +229,7 @@
     <div class="bottom-bar">
       <div class="bottom-bar-left">
         <button id="hide-editor" onclick="toggleEditor()">Hide Editor</button>
-        <div id="dl" class="dl"><a id="downloadLink" href="" onclick="downloadText()">Save</a></div>
+        <div id="dl" class="dl"><a id="downloadLink" onclick="downloadText()">Save</a></div>
         <div id="menu" class="menu"><a href="/how-to-use.html" target="_blank">How it works?</a></div>
       </div>
       <div>
