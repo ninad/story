@@ -224,6 +224,7 @@
     <div class="bottom-bar">
       <div class="bottom-bar-left">
         <button id="hide-editor" onclick="toggleEditor()">Hide Editor</button>
+        <div id="dl" class="dl"><a id="downloadLink" href="" onclick="downloadText()">Save</a></div>
         <div id="menu" class="menu"><a href="/how-to-use.html" target="_blank">How it works?</a></div>
       </div>
       <div>
@@ -236,6 +237,21 @@
 <div>
 </div>
 <script>
+
+function downloadText() {
+  const textarea = document.getElementById('input');
+  const text = textarea.value;
+
+  const blob = new Blob([text], {type: 'text/plain'});
+
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'StoryMap.txt';  
+  a.click();
+
+  URL.revokeObjectURL(a.href);
+}
+
   function populateTextArea() {
     const defaultContent = `
 🙋‍♂️ Persona: James, a busy professional
