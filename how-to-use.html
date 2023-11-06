@@ -1,123 +1,131 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/site.webmanifest">
-  <title>StoryMap - Simple User Story Mapping</title>
-  
-  <style>
-        
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <title>StoryMap - Simple User Story Mapping</title>
+
+    <style>
         #index {
-        position: fixed;
-        left: 10px;
-        top: 60px;
-        bottom: 0;
-        width: 170px;
-        padding: 16px;
-        overflow: auto;
+            position: fixed;
+            left: 10px;
+            top: 60px;
+            bottom: 0;
+            width: 170px;
+            padding: 16px;
+            overflow: auto;
         }
 
         #index ul {
-        list-style: none;
-        padding: 0;
+            list-style: none;
+            padding: 0;
         }
 
         #index li {
-        margin: 8px 0;
+            margin: 8px 0;
         }
 
         #index a {
-        text-decoration: none;
-        color: #06c;
+            text-decoration: none;
+            color: #06c;
         }
 
         body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: #333;
-        max-width: 600px;
-        margin: 0 250px;
-        padding: 0 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #333;
+            max-width: 600px;
+            margin: 0 250px;
+            padding: 0 16px;
         }
 
         .footer {
-        padding: 40px 0 20px 0;
-        text-align: center;
-        color: #ccc; 
-        line-height: 25px;
+            padding: 40px 0 20px 0;
+            text-align: center;
+            color: #ccc;
+            line-height: 25px;
         }
+
         .footer a {
-        color: #ccc; 
+            color: #ccc;
         }
-        
+
         .logo {
-        height: 32px;
-        }        
-        
+            height: 32px;
+        }
+
         h1 {
             padding-top: 30px;
         }
-        
-        h1, h3 {
-        font-weight: 600; 
+
+        h1,
+        h3 {
+            font-weight: 600;
         }
 
         a {
-        color: #06c;
+            color: #06c;
         }
 
         pre {
-        background: #f1f1f1;
-        padding: 30px;
-        border-radius: 5px;   
+            background: #f1f1f1;
+            padding: 30px;
+            border-radius: 5px;
         }
 
         p {
-        line-height: 1.6;
+            line-height: 1.6;
         }
 
-        .learn li{
+        .learn li {
             line-height: 28px;
         }
-  </style>
+    </style>
 
 </head>
+
 <body>
     <div id="index">
         <ul>
-          <li><a href="#what">What is a Story Map?</a></li>
-          <li><a href="#history">A Brief History</a></li>
-          <li><a href="#how">How it works</a></li> 
-          <li><a href="#guide">Create your own</a></li>
-          <li><a href="#learn">Learning resources</a></li>
-          <li><a href="#example">Airbnb story map</a></li>
-          <li><a href="#faq">FAQ</a></li>
+            <li><a href="#what">What is a Story Map?</a></li>
+            <li><a href="#history">A Brief History</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#guide">Create your own</a></li>
+            <li><a href="#learn">Learning resources</a></li>
+            <li><a href="#example">Airbnb story map</a></li>
+            <li><a href="#faq">FAQ</a></li>
         </ul>
     </div>
 
-    <a href="https://storymap.site/"><img alt="Logo and link to visit StoryMap.site" title="Back to StoryMap.site" class="logo" src="/logo/storymap-logo.png" /></a>
+    <a href="https://storymap.site/"><img alt="Logo and link to visit StoryMap.site" title="Back to StoryMap.site"
+            class="logo" src="/logo/storymap-logo.png" /></a>
     <h1 id="what">What is a Story Map?</h1>
 
     <p>
         A User Story Map is a powerful visual tool to capture how real humans use your product.
-        It lays out user stories into an easy-to-understand map so you and your team can see what your users 
-        really need and then plan those amazing features. The map is typically organized horizontally by user 
+        It lays out user stories into an easy-to-understand map so you and your team can see what your users
+        really need and then plan those amazing features. The map is typically organized horizontally by user
         activities and vertically by priority, offering a birds-eye view of the product's functionality.</p>
-    <h1 id="history">A Brief History</h1>  
+    <h1 id="history">A Brief History</h1>
 
     <p>
-        <a href="https://jpattonassociates.com/">Jeff Patton</a> introduced User Story Mapping in 2005, gaining traction with his 2014 book - <a href="https://www.goodreads.com/en/book/show/22221112">User Story Mapping: Discover the Whole Story, Build the Right Product. </a>
-        The method is a standard in Agile and UX/UI fields. Story maps are used by companies like Atlassian and Gitlab. 
+        <a href="https://jpattonassociates.com/">Jeff Patton</a> introduced User Story Mapping in 2005, gaining traction
+        with his 2014 book - <a href="https://www.goodreads.com/en/book/show/22221112">User Story Mapping: Discover the
+            Whole Story, Build the Right Product. </a>
+        The method is a standard in Agile and UX/UI fields. Story maps are used by companies like Atlassian and Gitlab.
     </p>
 
     <h1 id="how">How to use storymap.site?</h1>
 
     <p>
-        Using <a href="https://storymap.site">storymap.site</a> is simple.  It is designed to use plain text input to quickly draw the map. Take a look at the example below to see how the map is constructed from simple bulleted instructions. 
+        Using <a href="https://storymap.site">storymap.site</a> is simple. It is designed to use plain text input to
+        quickly draw the map. Take a look at the example below to see how the map is constructed from simple bulleted
+        instructions.
     </p>
 
-<pre><code>🙋‍♂️ Persona: James, a busy professional
+    <pre><code>🙋‍♂️ Persona: James, a busy professional
 🚘 Activity: Order a ride 
 
 * Step: Open app
@@ -140,7 +148,7 @@
 ** Story: Rate driver and provide feedback after trip</code></pre>
 
     <p>
-        You can get creative and use emojis to communicate various things, 
+        You can get creative and use emojis to communicate various things,
         like key steps, frustration points for the user, or even tag releases or priority.
         Tip: To use emojis, use the keyboard shortcut Ctrl+CMD+Space on Mac and (Windows logo key + .) on Windows.
     </p>
@@ -150,46 +158,55 @@
     <h1 id="guide">Create your first story map</h1>
 
     <h3>Step 1: Assemble the Team</h3>
-    <p>Gather everyone who will contribute to the product: designers, developers, product owners, and other stakeholders.</p>
+    <p>Gather everyone who will contribute to the product: designers, developers, product owners, and other
+        stakeholders.</p>
 
-    <h3>Step 2: Identify User Personas</h3>  
+    <h3>Step 2: Identify User Personas</h3>
     <p>Know who your users are, what their goals are, and what problems they face.</p>
 
     <h3>Step 3: Define the Backbone of the story</h3>
     <p>
-        Identify the key Activities (blue cards) and Steps (green cards) that users take while interacting with the product. 
+        Identify the key Activities (blue cards) and Steps (green cards) that users take while interacting with the
+        product.
         Place these horizontally on the map.
     </p>
 
     <h3>Step 4: Brainstorm User Stories </h3>
     <p>
-        For each Step (green card), list out the associated user stories (yellow cards). 
+        For each Step (green card), list out the associated user stories (yellow cards).
         These are specific tasks users will complete. Place these under the corresponding Steps.
     </p>
 
-    <h3>Step 5: Prioritize Stories</h3>  
+    <h3>Step 5: Prioritize Stories</h3>
     <p>
-        Rank the stories vertically based on priority. 
+        Rank the stories vertically based on priority.
         Critical functionalities should be at the top.
     </p>
     <h1 id="learn">Learning resources</h1>
     <p>
         These resources will help you learn more about story mapping:
     </p>
-    <ul class="learn">        
-        <li>Nielsen Norman Group <a href="https://www.nngroup.com/articles/user-story-mapping/" target="_blank">Mapping User Stories in Agile</a></li>
-        <li>Jeff Patton <a href="https://www.youtube.com/watch?v=mqf_450kXQw" target="_blank">Using Story Mapping to Repair Agile Dysfunction Video</a></li> 
-        <li>Airbnb <a href="https://www.youtube.com/watch?v=kKt3z8GNCrw" target="_blank">Customer Journey at Airbnb Video</a></li>
-        <li>Agilevelocity <a href="https://agilevelocity.com/agile-tools/story-mapping-101/" target="_blank">Story Mapping 101</a></li>
-        <li>Easyagile <a href="https://www.easyagile.com/training/building-user-story-maps.pdf" target="_blank">Building Story Maps PDF</a></li>
-        <li>Jeff Patton <a href="https://www.jpattonassociates.com/wp-content/uploads/2015/03/story_mapping.pdf" target="_blank">Story Map Concepts PDF</a>
-        <li>GitLab <a href="https://www.youtube.com/watch?v=zWtaqydPNMk" target="_blank">Example Story Mapping Session Video</a></li>
+    <ul class="learn">
+        <li>Nielsen Norman Group <a href="https://www.nngroup.com/articles/user-story-mapping/" target="_blank">Mapping
+                User Stories in Agile</a></li>
+        <li>Jeff Patton <a href="https://www.youtube.com/watch?v=mqf_450kXQw" target="_blank">Using Story Mapping to
+                Repair Agile Dysfunction Video</a></li>
+        <li>Airbnb <a href="https://www.youtube.com/watch?v=kKt3z8GNCrw" target="_blank">Customer Journey at Airbnb
+                Video</a></li>
+        <li>Agilevelocity <a href="https://agilevelocity.com/agile-tools/story-mapping-101/" target="_blank">Story
+                Mapping 101</a></li>
+        <li>Easyagile <a href="https://www.easyagile.com/training/building-user-story-maps.pdf" target="_blank">Building
+                Story Maps PDF</a></li>
+        <li>Jeff Patton <a href="https://www.jpattonassociates.com/wp-content/uploads/2015/03/story_mapping.pdf"
+                target="_blank">Story Map Concepts PDF</a>
+        <li>GitLab <a href="https://www.youtube.com/watch?v=zWtaqydPNMk" target="_blank">Example Story Mapping Session
+                Video</a></li>
     </ul>
     <h1 id="example">An example story map of Airbnb</h1>
     <p>
         Explore this example of a user story map of a Guest and Host experience of Airbnb
     </p>
-    <pre><code>🙋‍♂️ Persona: James, Guest, traveller who loves home stays
+    <pre><code>🙋‍♂️ Persona: James, Guest, traveler who loves home stays
 
 🏡 Find accommodation 
 
@@ -203,7 +220,7 @@
 * Browse listings
 ** Display listings on a map 
 ** Sort listings by rating
-** Reccomendations based on past bookings
+** Recommendations based on past bookings
 
 * View a listing
 ** Display listing details
@@ -240,7 +257,7 @@
 ** Add high quality photos of the house
 ** Set pricing based on area 
 ** Set property location
-** Add Amenities and available spaces 
+** Add Amenities and available spaces
 
 💼 Manage my property
 
@@ -249,22 +266,24 @@
 ** Respond to guest reviews 
 ** Prompt to fill out more detailed property information 
 ** Faster payments for super hosts</code></pre>
-<p>To see this map, copy and paste it in the editor on <a href="https://storymap.site">storymap.site</a></p>
+    <p>To see this map, copy and paste it in the editor on <a href="https://storymap.site">storymap.site</a></p>
 
-<h1 id="faq">FAQ</h1>
-<h3>How can I share a Map I created?</h3> 
-    <p> The story maps are appended to the URL as you create your map. When you share this URL with someone, they will see the same map you created. This methid is limited by the URL character count supported by your browser. Microsoft Edge: 2,083 characters
-        Google Chrome: 32,779 characters, Mozilla Firefox: 64,000+ characters, Apple Safari: 64,000+ characters</p> 
+    <h1 id="faq">FAQ</h1>
+    <h3>How can I share a Map I created?</h3>
+    <p> The story maps are appended to the URL as you create your map. When you share this URL with someone, they will
+        see the same map you created. This is limited by the URL character count supported by your browser.</p>
 
-<h3>How do I save a Story Map?</h3> 
-    <p> There is currently no way to save your story map within the app. This app is built using GitHub Pages. To save your work: </p> 
-    <ul> 
-        <li>Click the save button to download a .txt file of your map</li> 
-        <li>OR manually copy and paste your story map text from the editor into a document of your choice</li> 
-        <li>When you need the map again, paste the content back into the app</li> 
-    </ul> 
-<h3>Got feedback?</h3> 
+    <h3>How do I save a Story Map?</h3>
+    <p> There is currently no way to save your story map within the app. This app is built using GitHub Pages. To save
+        your work: </p>
+    <ul>
+        <li>Click the save button to download a .txt file of your map</li>
+        <li>OR manually copy and paste your story map text from the editor into a document of your choice</li>
+        <li>When you need the map again, paste the content back into the app</li>
+    </ul>
+    <h3>Got feedback?</h3>
     <p> Wite to me at ninad@raval.in. </p>
-<div class="footer">Take a deep breath <br> <a href="https://ninad.github.io/">ninad.github.io</a></div>
+    <div class="footer">Take a deep breath <br> <a href="https://ninad.github.io/">ninad.github.io</a></div>
 </body>
+
 </html>
