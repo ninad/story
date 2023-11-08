@@ -180,7 +180,7 @@
   <script>
     function generateStoryMap() {
       const input = document.getElementById('input').value;
-      window.location.hash = encodeURIComponent(input)
+      window.location.hash = btoa(encodeURIComponent(input))
       const lines = input.split('\n').filter(Boolean);
       const container = document.getElementById('container');
 
@@ -334,11 +334,11 @@
 ** 🟢 Story: Food kept hot during delivery
 ** Story: Provide ratings and feedback
 `
-      let hash = decodeURIComponent(window.location.hash)
+      let hash = window.location.hash
       if (hash?.startsWith('#')) {
         hash = hash.substring(1)
       }
-      document.querySelector('#input').value = hash || defaultContent
+        document.querySelector('#input').value = hash ? decodeURIComponent(atob(hash)) : defaultContent
     }
 
     populateTextArea()
