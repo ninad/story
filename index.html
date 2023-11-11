@@ -244,6 +244,11 @@
       if (event.metaKey && event.key === '/' && event.target.tagName !== 'TEXTAREA') {
         toggleEditor()
       }
+      gtag('event', 'toggle-editor', {
+        event_category: 'engagement',
+        event_label: 'toggle-clicked',
+      });
+
     })
   </script>
 </head>
