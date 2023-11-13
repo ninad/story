@@ -5,182 +5,214 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-40G2H0E58K"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-40G2H0E58K');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-40G2H0E58K');
   </script>
-  <link rel="manifest" href="manifest.json" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="stylesheet" href="./styles/modal-v1.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
   <title>StoryMap - Simple User Story Mapping</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      margin: 0;
-      box-sizing: border-box;
-    }
+      body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          margin: 0;
+          box-sizing: border-box;
+      }
 
-    html,
-    body,
-    .container,
-    .left-section,
-    .right-section {
-      height: 100%;
-    }
+      html,
+      body,
+      .container,
+      .left-section,
+      .right-section {
+          height: 100%;
+      }
 
-    .container {
-      display: flex;
-      justify-content: flex-start;
-    }
+      .container {
+          display: flex;
+          justify-content: flex-start;
+      }
 
-    .activity {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
+      .activity {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px;
+          margin-bottom: 10px;
+      }
 
-    .activity-title {
-      font-weight: 600;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 0px solid black;
-      background-color: #bad8ff;
-      min-width: 170px;
-      max-width: 170px;
-      min-height: 75px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 3px -1px, rgba(0, 0, 0, 0.3) 0px 1px 1px -1px;
-    }
+      .activity-title {
+          font-weight: 600;
+          margin-bottom: 10px;
+          padding: 10px;
+          border: 0px solid black;
+          background-color: #bad8ff;
+          min-width: 170px;
+          max-width: 170px;
+          min-height: 75px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 3px -1px, rgba(0, 0, 0, 0.3) 0px 1px 1px -1px;
+      }
 
-    .tasks-container {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-    }
+      .tasks-container {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+      }
 
-    .task {
-      font-weight: 500;
-      margin-right: 10px;
-      border: 0px solid black;
-      width: 190px;
-    }
+      .task {
+          font-weight: 500;
+          margin-right: 10px;
+          border: 0px solid black;
+          width: 190px;
+      }
 
-    .task-card {
-      background-color: #A5E7B2;
-      padding: 10px;
-      min-height: 75px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 3px -1px, rgba(0, 0, 0, 0.3) 0px 1px 1px -1px;
-    }
+      .task-card {
+          background-color: #A5E7B2;
+          padding: 10px;
+          min-height: 75px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 3px -1px, rgba(0, 0, 0, 0.3) 0px 1px 1px -1px;
+      }
 
-    .story {
-      font-weight: 400;
-      margin-top: 10px;
-      padding: 10px;
-      border: 0px solid black;
-      background-color: #fef3ad;
-      min-height: 75px;
-      min-width: 100px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 3px -1px, rgba(0, 0, 0, 0.3) 0px 1px 1px -1px;
-    }
+      .story {
+          font-weight: 400;
+          margin-top: 10px;
+          padding: 10px;
+          border: 0px solid black;
+          background-color: #fef3ad;
+          min-height: 75px;
+          min-width: 100px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 3px -1px, rgba(0, 0, 0, 0.3) 0px 1px 1px -1px;
+      }
 
-    textarea {
-      width: 400px;
-      resize: none;
-      font-size: 15px;
-      line-height: 20px;
-      padding: 10px 20px;
-      transition: border-color 0.3s ease;
-      /* Smooth transition */
+      textarea {
+          width: 400px;
+          resize: none;
+          font-size: 15px;
+          line-height: 20px;
+          padding: 10px 20px;
+          transition: border-color 0.3s ease;
+          /* Smooth transition */
 
-      box-shadow: 0px 0px 10px 5px rgba(175, 175, 175, 0.25) inset;
-      background: #F0F3FA;
-      border: none;
-      height: 100%;
-      box-sizing: border-box;
+          box-shadow: 0px 0px 10px 5px rgba(175, 175, 175, 0.25) inset;
+          background: #F0F3FA;
+          border: none;
+          height: 100%;
+          box-sizing: border-box;
 
-      outline-color: #c5cfdc;
-      outline-width: thin;
-      outline-offset: .5px;
-    }
+          outline-color: #c5cfdc;
+          outline-width: thin;
+          outline-offset: .5px;
+      }
 
-    .menu {
-      font-size: 15px;
-    }
+      .menu {
+          font-size: 15px;
+      }
 
-    textarea:focus {
-      border-color: rgb(134, 0, 0);
-    }
+      textarea:focus {
+          border-color: rgb(134, 0, 0);
+      }
 
-    .hidden {
-      width: 0 !important;
-      overflow: hidden;
-    }
+      .hidden {
+          width: 0 !important;
+          overflow: hidden;
+      }
 
-    .hidden textarea {
-      width: 0;
-    }
+      .hidden textarea {
+          width: 0;
+      }
 
-    #hide-editor {
-      font-size: 15px;
-      border: 1px #ccc solid;
-      padding: 8px 10px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+      #hide-editor {
+          font-size: 15px;
+          border: 1px #ccc solid;
+          padding: 8px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+      }
 
-    .left-section {
-      width: 400px;
-      transition: all ease-in 100ms;
-    }
+      .left-section {
+          width: 400px;
+          transition: all ease-in 100ms;
+      }
 
-    .right-section {
-      transition: all ease-in 100ms;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      min-width: 0;
-    }
+      .right-section {
+          transition: all ease-in 100ms;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          min-width: 0;
+      }
 
-    .content-container {
-      flex-grow: 1;
-      overflow: auto;
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: nowrap;
-    }
+      .content-container {
+          flex-grow: 1;
+          overflow: auto;
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+      }
 
-    .bottom-bar {
-      flex-shrink: 0;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-    }
+      .bottom-bar {
+          flex-shrink: 0;
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+      }
 
-    .bottom-bar-left {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-    }
+      .bottom-bar-left {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+      }
 
-    .dl a {
-      text-decoration: underline;
-      cursor: pointer;
-      color: #0000EE;
-    }
+      .dl a {
+          text-decoration: underline;
+          cursor: pointer;
+          color: #0000EE;
+      }
 
-    .dl a:visited {
-      color: #551A8B;
-    }
-    @media screen and (max-width: 600px) {
-        .left-section, textarea {
-            width: 300px;
-        }
-    }
+      .dl a:visited {
+          color: #551A8B;
+      }
+
+      @media screen and (max-width: 600px) {
+          .left-section, textarea {
+              width: 300px;
+          }
+      }
+
+      .try-storymap {
+          color: #AF4E30;
+          text-decoration: underline;
+          white-space: nowrap;
+          cursor: pointer;
+      }
+
+      .try-storymap:hover {
+          color: #701E05;
+      }
+
+      .bottom-right-bar {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 15px;
+      }
+
+      .mb-2 {
+          margin-bottom: 8px;
+      }
+
+      .pb-1 {
+          padding-bottom: 4px;
+      }
   </style>
   <script>
     function generateStoryMap() {
@@ -240,6 +272,7 @@
         button.innerText = 'Hide Editor'
       }
     }
+
     window.addEventListener('keydown', event => {
       if (event.metaKey && event.key === '/' && event.target.tagName !== 'TEXTAREA') {
         toggleEditor()
@@ -255,46 +288,71 @@
 
 <body>
 
-  <div class="container">
-    <div class="left-section">
+<div class="container">
+  <div class="left-section">
       <textarea id="input" rows="35" cols="50" oninput="generateStoryMap()">
 </textarea>
-    </div>
-    <div class="right-section">
-      <div class="content-container" id="container"></div>
-      <div class="bottom-bar">
-        <div class="bottom-bar-left">
-          <button id="hide-editor" title="cmd + /" onclick="toggleEditor()">Hide Editor</button>
-          <div id="dl" class="dl"><a id="downloadLink" onclick="downloadText()">Save</a></div>
-          <div id="menu" class="menu"><a href="/what-is-user-story-mapping.html" target="_blank">How it works</a></div>
-        </div>
-        <div>
-          <img src="./images/logo-grey.png" height="35">
-        </div>
+  </div>
+  <div class="right-section">
+    <div class="content-container" id="container"></div>
+    <div class="bottom-bar">
+      <div class="bottom-bar-left">
+        <button id="hide-editor" title="cmd + /" onclick="toggleEditor()">Hide Editor</button>
+        <div id="dl" class="dl"><a id="downloadLink" onclick="downloadText()">Save</a></div>
+        <div id="menu" class="menu"><a href="/what-is-user-story-mapping.html" target="_blank">How it works</a></div>
+      </div>
+      <div class="bottom-right-bar">
+        <a class="try-storymap trigger">Try Storymap 2.0</a>
+        <img src="./images/logo-grey.png" height="35">
       </div>
     </div>
   </div>
+</div>
 
-  <div>
+
+<div class="modal">
+  <div class="modal-content">
+    <img class="modal-logo" src="./images/logo-color.png" width="80">
+    <span class="close-button">X</span>
+    <div class="modal-content-container">
+      <h2 class="modal-heading">Get early access</h2>
+      <p class="modal-title">
+        StoryMap 2.0 - the best, effortless story mapping experience, powered by AI.
+      </p>
+      <input class="email-field" placeholder="Your email">
+      <div class="sub-type-container">
+        <div class="mb-2 pb-1">
+          <input type="radio" id="sub-10" name="subscriptionType" value="10" checked/>
+          <label for="sub-10">Charge a one-time fee ($10) to support development</label>
+        </div>
+        <input type="radio" id="sub-free" name="subscriptionType" value="free"/>
+        <label for="sub-free">Keep it free</label><br>
+      </div>
+      <button class="submit-btn">
+        Get early access →
+      </button>
+    </div>
   </div>
-  <script>
+</div>
 
-    function downloadText() {
-      const textarea = document.getElementById('input');
-      const text = textarea.value;
+<script>
 
-      const blob = new Blob([text], { type: 'text/plain' });
+  function downloadText() {
+    const textarea = document.getElementById('input');
+    const text = textarea.value;
 
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'StoryMap.txt';
-      a.click();
+    const blob = new Blob([text], { type: 'text/plain' });
 
-      URL.revokeObjectURL(a.href);
-    }
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'StoryMap.txt';
+    a.click();
 
-    function populateTextArea() {
-      const defaultContent = `
+    URL.revokeObjectURL(a.href);
+  }
+
+  function populateTextArea() {
+    const defaultContent = `
 🙋‍♂️ Persona: James, a busy professional
 
 🚘 Activity: Order a ride
@@ -344,26 +402,66 @@
 ** 🟢 Story: Food kept hot during delivery
 ** Story: Provide ratings and feedback
 `
-      let hash = window.location.hash
-      if (hash?.startsWith('#')) {
-        hash = hash.substring(1)
-      }
-        document.querySelector('#input').value = hash ? decodeURIComponent(atob(hash)) : defaultContent
+    let hash = window.location.hash
+    if (hash?.startsWith('#')) {
+      hash = hash.substring(1)
     }
+    document.querySelector('#input').value = hash ? decodeURIComponent(atob(hash)) : defaultContent
+  }
 
-    populateTextArea()
-    generateStoryMap()
-  </script>
-  <script>
-    /*if ("serviceWorker" in navigator) {
-      window.addEventListener("load", function() {
-        navigator.serviceWorker
-        .register("/serviceWorker.js")
-        .then(res => console.log("service worker registered"))
-        .catch(err => console.log("service worker not registered", err))
-      })
-    }*/
-  </script>
+  populateTextArea()
+  generateStoryMap()
+</script>
+<script>
+  /*if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+      navigator.serviceWorker
+      .register("/serviceWorker.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err))
+    })
+  }*/
+</script>
+<script>
+  /*
+  Modal script
+
+   */
+  var modal = document.querySelector(".modal");
+  var trigger = document.querySelector(".trigger");
+  var closeButton = document.querySelector(".close-button");
+  var submitButton = document.querySelector(".submit-btn");
+
+  function toggleModal() {
+    modal.classList.toggle("show-modal");
+  }
+
+  function windowOnClick(event) {
+    if (event.target === modal) {
+      toggleModal();
+    }
+  }
+
+  function onSubmitClick() {
+    const subType = document.querySelector('#sub-free').checked ? 'free' : 'paid'
+    const email = document.querySelector('.email-field').value
+    gtag('event', 'request-v2', {
+      event_category: 'engagement',
+      event_label: 'request-v2',
+      email: email,
+      subscriptionType: subType
+    });
+    toggleModal()
+    setTimeout(() => alert('Preferences have been saved'), 500)
+  }
+
+  trigger.addEventListener("click", toggleModal);
+  closeButton.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick);
+  submitButton.addEventListener("click", onSubmitClick);
+
+
+</script>
 </body>
 
 </html>
