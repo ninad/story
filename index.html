@@ -453,6 +453,7 @@
     });
     toggleModal()
     setTimeout(() => alert('Preferences have been saved'), 500)
+    document.querySelector('.email-field').value = ''
   }
 
   trigger.addEventListener("click", toggleModal);
