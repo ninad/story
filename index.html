@@ -453,9 +453,9 @@
     function onSubmitClick() {
       const subType = document.querySelector('#sub-free').checked ? 'free' : 'paid'
       const email = document.querySelector('.email-field').value
-      gtag('event', 'request-v2', {
+      gtag('event', 'request-v2- ' + subType, {
         event_category: 'engagement',
-        event_label: 'request-v2',
+        event_label: 'request-v2 - ' + subType,
         email: email,
         subscriptionType: subType
       });
