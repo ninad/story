@@ -113,7 +113,7 @@
       outline-offset: .5px;
     }
 
-    .menu {
+    .how-it-works {
       font-size: 15px;
     }
 
@@ -194,6 +194,11 @@
       textarea {
         width: 300px;
       }
+    }
+    @media (max-width: 1024px){
+        .try-storymap, .how-it-works, .dl {
+            display: none;
+        }
     }
 
     .try-storymap {
@@ -307,7 +312,7 @@
         <div class="bottom-bar-left">
           <button id="hide-editor" title="cmd + /" onclick="toggleEditor()">Hide Editor</button>
           <div id="dl" class="dl"><a id="downloadLink" class="dl" onclick="downloadText()">Save</a></div>
-          <div id="menu" class="menu"><a href="/what-is-user-story-mapping.html" target="_blank">How it works</a></div>
+          <div id="how-it-works" class="how-it-works"><a href="/what-is-user-story-mapping.html" target="_blank">How it works</a></div>
         </div>
         <div class="bottom-right-bar">
           <a class="try-storymap trigger">Try StoryMap 2.0</a>
@@ -433,7 +438,7 @@
   <script>
     /*
     Modal script
-  
+
      */
     var modal = document.querySelector(".modal");
     var trigger = document.querySelector(".trigger");
